@@ -14,6 +14,9 @@ class NonTrasactionalTest {
     @Autowired
     private Trasactional trasactional;
 
+    @Autowired
+    private AsyncService async;
+
     @Test
     void nonTrasactionalTest() {
         System.out.println(nonTrasactional);
@@ -24,9 +27,10 @@ class NonTrasactionalTest {
     void nonTrasactionalTest2() {
         System.out.println("NonTrasactional instanceof Proxy? " + AopUtils.isAopProxy(nonTrasactional));
         System.out.println("Trasactional instanceof Proxy? " + AopUtils.isAopProxy(trasactional));
+        System.out.println("async instanceof Proxy? " + AopUtils.isAopProxy(async));
 
         System.out.println(nonTrasactional.getClass().getName());
         System.out.println(trasactional.getClass().getName());
-
+        System.out.println(async.getClass().getName());
     }
 }
