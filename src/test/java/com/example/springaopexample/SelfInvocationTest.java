@@ -1,5 +1,8 @@
 package com.example.springaopexample;
 
+import com.example.springaopexample.transaction.Member;
+import com.example.springaopexample.transaction.MemberRepository;
+import com.example.springaopexample.transaction.SelfInvocation;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
